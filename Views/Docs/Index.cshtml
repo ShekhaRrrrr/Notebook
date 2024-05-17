@@ -1,0 +1,39 @@
+﻿@* @model IEnumerable<googledocs.Models.Doc>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Click To Create A New Document</h1>
+<div class="d-flex justify-content-center align-items-center" style="width:150px;height:250px;background-color:rebeccapurple;font-size:85px;"
+<a style="text-decoration:none;color:black;" asp-action="Create">+</a>
+
+
+
+GPT CORRECTED THE DIV TAG
+GPT OUTPUT
+
+ *@
+ @model IEnumerable<googledocs.Models.Doc>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Click To Create A New Document</h1>
+<div class="d-flex justify-content-center align-items-center" style="width:150px;height:250px;background-color:rebeccapurple;font-size:85px;">
+    <a style="text-decoration:none;color:black;" asp-action="Create">+</a>
+</div>
+<span style="font-synthesis-weight:auto">Untitled Document</span>
+</hr>
+<div class="row">
+@foreach (var item in Model)
+{
+    <div class="col-2">
+    <div class="d-flex justify-content-center align-items-center" style="width:150px;height:250px;background-color:lightseagreen;font-size:85px;">
+        <a style="text-decoration:none;color:black;" asp-action="Edit" asp-route-id="@item.Id">📝</a>
+    </div>
+    <span stye="font-weight:bold">@item.Title</span>
+    </div>
+}
+</div> 
